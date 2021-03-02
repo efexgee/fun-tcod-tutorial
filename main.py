@@ -8,6 +8,8 @@ from input_handlers import EventHandler
 
 
 def main() -> None:
+    print("\nHello Dungeon!\n")
+
     screen_width = 80
     screen_height = 50
 
@@ -32,7 +34,7 @@ def main() -> None:
         screen_width,
         screen_height,
         tileset=tileset,
-        title="Yet Another Roguelike Tutorial",
+        title="FXG TCOD Tutorial",
         vsync=True,
     ) as context:
         root_console = tcod.Console(screen_width, screen_height, order="F")
@@ -43,6 +45,8 @@ def main() -> None:
 
             engine.handle_events(events)
 
+    print("\nFell off the end of main()")
+    print("\nGoodbye Dungeon!\n")
 
 if __name__ == "__main__":
     main()
